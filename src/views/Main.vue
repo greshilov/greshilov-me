@@ -51,10 +51,11 @@
           <ul class="job">
             <li v-for="j in jobs" :key="j.icon">
               <div class="job-title">
-                <img
-                  class="job-icon"
-                  :src="require(`@/assets/images/${j.icon}`)"
-                />{{ j.title }}
+                <a :href="j.link">
+                  <img
+                    class="job-icon"
+                    :src="require(`@/assets/images/${j.icon}`)" /></a
+                >{{ j.title }}
               </div>
               <div class="job-description" v-html="j.description"></div>
             </li>
@@ -91,12 +92,14 @@ export default class Main extends Vue {
       title: "Maps.Me Offline maps for travellers #1",
       description:
         "<i>Automation Engeneer</i> — CI, development of internal automatization tools & services.",
+      link: "https://maps.me/app/",
     },
     {
       icon: "gosu.jpg",
       title: "GOSU.AI Voice assistant platform for gamers",
       description:
         "<i>Backend / Full-stack Developer</i> — backend for the advanced game voice assistant application, steam bot service with 10k+ users online.",
+      link: "https://gosu.ai/",
     },
   ];
 }
@@ -104,7 +107,7 @@ export default class Main extends Vue {
 
 <style lang="scss">
 section.main {
-  margin-top: 30px;
+  margin: 40px 0 40px;
 
   .links {
     display: flex;
@@ -122,7 +125,6 @@ section.main {
       }
     }
     .soc-mail {
-
       a {
         padding: 5px;
         color: black;
