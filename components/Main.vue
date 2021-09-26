@@ -4,7 +4,7 @@
       <div class="links">
         <div>
           <div class="photo">
-            <img src="@/assets/images/greshilov.jpg" />
+            <img src="@/static/images/greshilov.jpg" />
           </div>
           <div class="soc text-center">
             <a v-for="s in socialProfiles" :href="s.link" :key="s.media">
@@ -54,7 +54,7 @@
                 <a :href="j.link">
                   <img
                     class="job-icon"
-                    :src="require(`@/assets/images/${j.icon}`)" /></a
+                    :src="require(`@/static/images/${j.icon}`)" /></a
                 >{{ j.title }}
               </div>
               <div class="job-description" v-html="j.description"></div>
@@ -67,8 +67,9 @@
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-class-component";
+import { Vue, Component } from "vue-property-decorator";
 
+@Component
 export default class Main extends Vue {
   mail = "slovaricheg@gmail.com";
 
@@ -108,17 +109,13 @@ export default class Main extends Vue {
 <style lang="scss">
 section.main {
   margin: 40px 0 40px;
-
   .links {
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-right: 1px solid #24292e;
-
     .soc {
       font-size: 24px;
-
       a {
         text-decoration: none;
         padding: 5px;
@@ -129,44 +126,35 @@ section.main {
         padding: 5px;
         color: black;
       }
-
       span {
         font-size: 18px;
       }
-
       display: flex;
       align-items: center;
       justify-content: center;
     }
   }
-
   .grid {
     grid-template-columns: 1fr 3fr;
     grid-gap: 1em;
   }
-
   .photo img {
     max-width: 250px;
     border-radius: 10px;
   }
-
   .description {
     ul.job {
       list-style-type: none;
-
       li {
         padding: 10px;
-
         .job-title {
           display: flex;
           align-items: center;
         }
-
         .job-description {
           font-size: 18px;
           padding-left: 50px;
         }
-
         .job-icon {
           width: 40px;
           margin-right: 10px;
@@ -174,24 +162,19 @@ section.main {
       }
     }
   }
-
   @media only screen and (max-width: 1260px) {
     .grid {
       grid-template-columns: 1fr;
     }
-
     .links {
       border-right: none;
-
       .soc {
         font-size: 36px;
-
         a {
           padding: 10px;
         }
       }
     }
-
     .description {
       ul.job {
         padding-left: 0;
