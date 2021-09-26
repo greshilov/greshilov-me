@@ -100,6 +100,13 @@ export default class Main extends Vue {
         '<i>Backend / Full-stack Developer</i> — backend for the advanced game voice assistant application, steam bot service with 10k+ users online.',
       link: 'https://gosu.ai/'
     },
+    {
+      icon: 'sbergames.jpg',
+      title: 'SberGames',
+      description:
+        '<i>Tech Lead</i> — lead developer of voice assitant for games.',
+      link: 'https://sbergames.ru/'
+    }
   ];
 }
 </script>
