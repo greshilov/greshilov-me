@@ -27,13 +27,14 @@ export default {
     '@nuxt/typescript-build',
     ['@nuxtjs/fontawesome', {
       imports: [{
-          set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faEnvelope']
-          },
-          {set: '@fortawesome/free-brands-svg-icons',
-          icons: ['faFacebook', 'faGithub', 'faLinkedinIn']
-          },
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faEnvelope']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['faFacebook', 'faGithub', 'faLinkedinIn']
+      }
       ]
-   }]
-  ],
+    }]
+  ]
 }

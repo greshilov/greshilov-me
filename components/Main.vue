@@ -4,10 +4,10 @@
       <div class="links">
         <div>
           <div class="photo">
-            <img src="@/static/images/greshilov.jpg" />
+            <img src="@/static/images/greshilov.jpg">
           </div>
           <div class="soc text-center">
-            <a v-for="s in socialProfiles" :href="s.link" :key="s.media">
+            <a v-for="s in socialProfiles" :key="s.media" :href="s.link">
               <font-awesome-icon
                 :icon="['fab', s.media]"
                 :style="{ color: s.color }"
@@ -15,8 +15,7 @@
             </a>
           </div>
           <div class="soc-mail">
-            <a :href="`mailto:${mail}`"><font-awesome-icon icon="envelope" /></a
-            ><span>{{ mail }}</span>
+            <a :href="`mailto:${mail}`"><font-awesome-icon icon="envelope" /></a><span>{{ mail }}</span>
           </div>
         </div>
       </div>
@@ -26,8 +25,7 @@
           Hey! My name is Slava. I studied a plasma engineering specialty in
           <a
             href="https://en.wikipedia.org/wiki/Bauman_Moscow_State_Technical_University"
-            >BMSTU</a
-          >, but suddenly became a software developer. I'm currently focused on
+          >BMSTU</a>, but suddenly became a software developer. I'm currently focused on
           a backend, but generally love web development in all its forms.
         </p>
         <p>
@@ -35,9 +33,9 @@
           the open-source projects. You can find my commits in projects like
           <a href="https://github.com/aio-libs/aiohttp/pull/5298">aiohttp</a>
           and
-          <a href="https://github.com/verdaccio/verdaccio/pull/2072"
-            >verdaccio</a
-          >. Check out my last project using rust and webassembly
+          <a
+            href="https://github.com/verdaccio/verdaccio/pull/2072"
+          >verdaccio</a>. Check out my last project using rust and webassembly
           <a href="https://reds.greshilov.me">rust-event-driven-simulation</a>!
         </p>
         <p>
@@ -54,10 +52,10 @@
                 <a :href="j.link">
                   <img
                     class="job-icon"
-                    :src="require(`@/static/images/${j.icon}`)" /></a
-                >{{ j.title }}
+                    :src="require(`@/static/images/${j.icon}`)"
+                  ></a>{{ j.title }}
               </div>
-              <div class="job-description" v-html="j.description"></div>
+              <div class="job-description" v-html="j.description" />
             </li>
           </ul>
         </div>
@@ -67,40 +65,40 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component } from 'vue-property-decorator'
 
 @Component
 export default class Main extends Vue {
-  mail = "slovaricheg@gmail.com";
+  mail = 'slovaricheg@gmail.com';
 
   socialProfiles = [
-    { media: "github", link: "https://github.com/greshilov", color: "#24292e" },
+    { media: 'github', link: 'https://github.com/greshilov', color: '#24292e' },
     {
-      media: "linkedin-in",
-      link: "https://www.linkedin.com/in/greshilov/",
-      color: "#3b5998",
+      media: 'linkedin-in',
+      link: 'https://www.linkedin.com/in/greshilov/',
+      color: '#3b5998'
     },
     {
-      media: "facebook",
-      link: "https://www.facebook.com/Greshilov",
-      color: "#0072b1",
-    },
+      media: 'facebook',
+      link: 'https://www.facebook.com/Greshilov',
+      color: '#0072b1'
+    }
   ];
 
   jobs = [
     {
-      icon: "mapsme.svg",
-      title: "Maps.Me Offline maps for travellers #1",
+      icon: 'mapsme.svg',
+      title: 'Maps.Me Offline maps for travellers #1',
       description:
-        "<i>Automation Engeneer</i> — CI, development of internal automatization tools & services.",
-      link: "https://maps.me/app/",
+        '<i>Automation Engeneer</i> — CI, development of internal automatization tools & services.',
+      link: 'https://maps.me/app/'
     },
     {
-      icon: "gosu.jpg",
-      title: "GOSU.AI Voice assistant platform for gamers",
+      icon: 'gosu.jpg',
+      title: 'GOSU.AI Voice assistant platform for gamers',
       description:
-        "<i>Backend / Full-stack Developer</i> — backend for the advanced game voice assistant application, steam bot service with 10k+ users online.",
-      link: "https://gosu.ai/",
+        '<i>Backend / Full-stack Developer</i> — backend for the advanced game voice assistant application, steam bot service with 10k+ users online.',
+      link: 'https://gosu.ai/'
     },
   ];
 }
