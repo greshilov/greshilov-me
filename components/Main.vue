@@ -49,7 +49,7 @@
           <ul class="job">
             <li v-for="j in jobs" :key="j.icon">
               <div class="job-title">
-                <a :href="j.link">
+                <a :href="j.link" target="_blank">
                   <img
                     class="job-icon"
                     :src="require(`@/static/images/${j.icon}`)"
@@ -87,25 +87,26 @@ export default class Main extends Vue {
 
   jobs = [
     {
-      icon: 'mapsme.svg',
-      title: 'Maps.Me Offline maps for travellers #1',
+      icon: 'planner5d.png',
+      title: 'Planner5D 2D/3D home design tool used by 77M+ users worldwide',
       description:
-        '<i>Automation Engeneer</i> — CI, development of internal automatization tools & services.',
-      link: 'https://maps.me/app/'
+        '<i>DevOps</i> — designing and maintaining infrastructure for 3D renders and AI related services.',
+      link: 'https://planner5d.com/'
     },
     {
       icon: 'gosu.jpg',
       title: 'GOSU.AI Voice assistant platform for gamers',
       description:
-        '<i>Backend / Full-stack Developer</i> — backend for the advanced game voice assistant application, steam bot service with 10k+ users online.',
+        `<i>Tech Lead</i> — lead developer of voice assitant for games.<br/><br/>
+         <i>Full-stack Developer</i> — backend for the advanced game voice assistant application, steam bot service with 10k+ users online.`,
       link: 'https://gosu.ai/'
     },
     {
-      icon: 'sbergames.jpg',
-      title: 'SberGames',
+      icon: 'mapsme.svg',
+      title: 'Maps.Me Offline maps for travellers #1',
       description:
-        '<i>Tech Lead</i> — lead developer of voice assitant for games.',
-      link: 'https://sbergames.ru/'
+        '<i>Automation Engeneer</i> — CI, development of internal automatization tools & services.',
+      link: 'https://maps.me/app/'
     }
   ];
 }
