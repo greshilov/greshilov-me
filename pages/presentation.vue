@@ -19,47 +19,87 @@
         <p>Table of contents:</p>
         <ul>
           <li>
-            <a href="#mapsme">MAPS.ME / Software Engineer (2017 - 2018)</a>
+            <a
+              href="#planner5d"
+            >Planner5D / DevOps / Software Engineer (2022 - )</a>
           </li>
-          <li>
-            <a href="#gosuai">GOSU.AI / Software Engineer (2018 - 2021)</a>
-          </li>
+
           <li>
             <a
               href="#gosuai-lead"
-            >GOSU.AI / Lead Software Engineer (2021 - )</a>
+            >GOSU.AI / Lead Software Engineer (2021 - 2022)</a>
+          </li>
+
+          <li>
+            <a href="#gosuai">GOSU.AI / Software Engineer (2018 - 2021)</a>
+          </li>
+
+          <li>
+            <a href="#mapsme">MAPS.ME / Software Engineer (2017 - 2018)</a>
           </li>
           <li><a href="#education">Education</a></li>
         </ul>
       </div>
     </section>
-    <section id="mapsme">
-      <h2>MAPS.ME / Software Engineer</h2>
+
+    <section id="planner5d">
+      <h2>Planner5D / DevOps / Software Engineer</h2>
       <hr>
       <p>
-        MAPS.ME is a maps application for Android, iOS with 50M+ installs
-        worldwide.
+        An advanced and easy-to-use 2D/3D home design tool used by 77M+ users worldwide.
       </p>
       <ul>
         <li>
-          Improved application build speed on 3 platforms (Android, iOS, Linux)
-          up to 25%.
+          Moved rendering and AI/ML workload to a self-hosted kubernetes cluster,
+          improving reliability and scalability.
         </li>
         <li>
-          Integrated plural strings support in application localization system.
+          Improved build/release time for web backend from 15+ minutes to 3-5 minutes.
         </li>
-        <li>Created UI dashboard for in-house analytic system.</li>
       </ul>
 
-      <div class="gallery grid">
-        <ImgDesc
-          src="presentation/mapsme-1.png"
-          desc="Overview of the application:"
-        />
-        <ImgDesc
-          src="presentation/mapsme-2.png"
-          desc="CI dashboard with Jenkins:"
-        />
+      <div class="gallery">
+        <div class="gallery grid">
+          <ImgDesc
+            src="presentation/platforms-web.png.webp"
+            desc="Overview of the web application:"
+          />
+          <ImgDesc
+            src="presentation/platforms-ios.png.webp"
+            desc="Overview of the mobile clients:"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="gosuai-lead">
+      <h2>GOSU.AI / Lead Software Engineer</h2>
+      <hr>
+      <p>
+        Project pivoted to become voice assistant (imagine Amazon Alexa that
+        helps you during the game). And after a series of investment rounds the
+        startup was acquired by a major corporation and grew from 10-20 to
+        250-300 people
+      </p>
+      <ul>
+        <li>Led the development of a voice assistant desktop application.</li>
+        <li>
+          Designed and implemented server-side to provide users with thousands
+          of voice commands and responses per minute.
+        </li>
+      </ul>
+
+      <div class="gallery">
+        <div class="gallery grid">
+          <ImgDesc
+            src="presentation/voice.png"
+            desc="Overview of the application:"
+          />
+          <ImgDesc
+            src="presentation/voice-2.png"
+            desc="Game overlay with hints and tips during the match:"
+          />
+        </div>
       </div>
     </section>
 
@@ -102,34 +142,33 @@
       </div>
     </section>
 
-    <section id="gosuai-lead">
-      <h2>GOSU.AI / Lead Software Engineer</h2>
+    <section id="mapsme">
+      <h2>MAPS.ME / Software Engineer</h2>
       <hr>
       <p>
-        Project pivoted to become voice assistant (imagine Amazon Alexa that
-        helps you during the game). And after a series of investment rounds the
-        startup was acquired by a major corporation and grew from 10-20 to
-        250-300 people
+        MAPS.ME is a maps application for Android, iOS with 50M+ installs
+        worldwide.
       </p>
       <ul>
-        <li>Led the development of a voice assistant desktop application.</li>
         <li>
-          Designed and implemented server-side to provide users with thousands
-          of voice commands and responses per minute.
+          Improved application build speed on 3 platforms (Android, iOS, Linux)
+          up to 25%.
         </li>
+        <li>
+          Integrated plural strings support in application localization system.
+        </li>
+        <li>Created UI dashboard for in-house analytic system.</li>
       </ul>
 
-      <div class="gallery">
-        <div class="gallery grid">
-          <ImgDesc
-            src="presentation/voice.png"
-            desc="Overview of the application:"
-          />
-          <ImgDesc
-            src="presentation/voice-2.png"
-            desc="Game overlay with hints and tips during the match:"
-          />
-        </div>
+      <div class="gallery grid">
+        <ImgDesc
+          src="presentation/mapsme-1.png"
+          desc="Overview of the application:"
+        />
+        <ImgDesc
+          src="presentation/mapsme-2.png"
+          desc="CI dashboard with Jenkins:"
+        />
       </div>
     </section>
 
